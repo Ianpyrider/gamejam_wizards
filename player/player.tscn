@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpcdwost38ffv"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_hc5pe"]
+[ext_resource type="Texture2D" uid="uid://c3035tvvcij50" path="res://player test.png" id="2_lm88x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t31wi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lm88x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngjjb"]
+size = Vector2(80, 80)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_hc5pe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-9.23872e-07, -0.499988)
+scale = Vector2(3.3125, 3.32813)
+sprite_frames = SubResource("SpriteFrames_t31wi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ngjjb")
+
+[node name="Gun" type="Marker2D" parent="."]

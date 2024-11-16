@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5m6b47455vr1"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_3hoca"]
+[ext_resource type="PackedScene" uid="uid://bpcdwost38ffv" path="res://player/player.tscn" id="1_vi86g"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_3hoca")
+
+[node name="Player" parent="." instance=ExtResource("1_vi86g")]
+position = Vector2(513, 280)
+
+[node name="EnemySpawn" type="Marker2D" parent="."]
+position = Vector2(840, 454)
